@@ -1,0 +1,5 @@
+# Python
+**/__pycache__/
+/tps6598x_ace_caldigit_fw_parser.egg-info/
+/tps6598x_ace_caldigit_fw_parser/_version.py
+/.ruff_cache/

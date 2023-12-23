@@ -1,0 +1,49 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools>=61", "setuptools-scm>=8.0"]
+
+[project]
+authors = [
+  {name = "Jevin Sweval", email = "jevinsweval@gmail.com"}
+]
+classifiers = [
+  "Programming Language :: Python :: 3"
+]
+dependencies = [
+  "attrs",
+  "construct",
+  "construct-typing",
+  "nativetypes",
+  "typed-argument-parser"
+]
+description = "Utilities for parsing TI TPS6598x ACE USB-PD controller firmware for CalDigit devices"
+dynamic = ["version"]
+keywords = ["tps6598x", "caldigit", "ace"]
+license = {text = "BSD-2-Clause"}
+name = "tps6598x-ace-caldigit-fw-parser"
+readme = {file = 'README.md', content-type = 'text/markdown'}
+requires-python = ">=3.11"
+
+[project.optional-dependencies]
+optional-dependencies = [
+  "pre-commit"
+]
+
+[project.scripts]
+tps6598x-ace-caldigit-fw-parser = "tps6598x_ace_caldigit_fw_parser.tools.tps6598x_ace_caldigit_fw_parser:main"
+
+[project.urls]
+Repository = "https://github.com/jevinskie/tps6598x-ace-caldigit-fw-parser"
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.setuptools]
+zip-safe = true
+
+[tool.setuptools.dynamic]
+version = {attr = "tps6598x_ace_caldigit_fw_parser._version.__version__"}
+
+[tool.setuptools_scm]
+version_file = "tps6598x_ace_caldigit_fw_parser/_version.py"
