@@ -14,6 +14,7 @@ dependencies = [
   "construct",
   "construct-typing",
   "nativetypes",
+  "path",
   "typed-argument-parser"
 ]
 description = "Utilities for parsing TI TPS6598x ACE USB-PD controller firmware for CalDigit devices"
@@ -30,7 +31,7 @@ optional-dependencies = [
 ]
 
 [project.scripts]
-tps6598x-ace-caldigit-fw-parser = "tps6598x_ace_caldigit_fw_parser.tools.tps6598x_ace_caldigit_fw_parser:main"
+tps6598x-ace-caldigit-fw-parser = "tps6598x_ace_caldigit_fw_parser.tools.parser:main"
 
 [project.urls]
 Repository = "https://github.com/jevinskie/tps6598x-ace-caldigit-fw-parser"
